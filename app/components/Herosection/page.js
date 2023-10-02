@@ -59,7 +59,7 @@ const Hero = () => {
       </div>
       <div className="flex items-center justify-center">
         <section className="flex">
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 z-20">
             <Image
               alt=""
               width={4096}
@@ -77,19 +77,19 @@ const Hero = () => {
               className="self-start w-[374px] h-[218px] shrink-0 z-0 rounded-xl contain"
             />
           </div>
-          <div className="ms-5">
+          <div className="ms-5 z-20">
             <Image
               alt=""
               width={4096}
               height={2731}
               src="/img3.png"
               id="ICON2"
-              className="self-start w-[305px] h-[448px] shrink-0 z-0 rounded-xl"
+              className="self-start w-[305px] h-[448px] shrink-0  rounded-xl"
             />
           </div>
-          {/* <div className="dotted-blue w-min"></div>
-          <div className="dotted-grey w-min"></div> */}
         </section>
+        <div className="dotted-blue w-min"></div>
+        <div className="dotted-grey w-min -z-10"></div>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const HowItWorks = () => {
@@ -20,12 +21,19 @@ const HowItWorks = () => {
             <div className="text-center text-3xl font-['Inter'] font-semibold text-[#1b233d]">
               Record Screen
             </div>
-            <div className="text-center text-xl font-['Work_Sans'] leading-[30.3px] text-[#616163] self-start w-full">
+            <div className="text-center text-xl font-['Work_Sans'] h-32 leading-[30.3px] text-[#616163] self-start w-full">
               Click the &quot;Start Recording&quot; button in our extension.
               {"  "}
               choose which part of your screen to capture and who you want to
               send it to.
             </div>
+
+            <Image
+              width={1000}
+              height={1000}
+              src="vector.svg"
+              alt="My vector SVG"
+            />
           </div>
         </div>
         <div className="flex flex-col gap-8 w-full items-center">
@@ -41,10 +49,16 @@ const HowItWorks = () => {
             <div className="text-center text-3xl font-['Inter'] font-semibold text-[#1b233d]">
               Share Your Recording
             </div>
-            <div className="text-center text-xl font-['Work_Sans'] leading-[30.3px] text-[#616163] self-start w-full">
+            <div className="text-center text-xl font-['Work_Sans'] h-32 leading-[30.3px] text-[#616163] self-start w-full">
               We generate a shareable link for your video. Simply send it to
               your audience via email or copy the link to send via any platform.
             </div>
+            <Image
+              width={1000}
+              height={1000}
+              src="vector.svg"
+              alt="My vector SVG"
+            />
           </div>
         </div>
         <div className="flex flex-col gap-8 w-full items-center">
@@ -60,10 +74,16 @@ const HowItWorks = () => {
             <div className="text-center text-3xl font-['Inter'] font-semibold text-[#1b233d]">
               Learn Effortlessly
             </div>
-            <div className="text-center text-xl font-['Work_Sans'] leading-[30.3px] text-[#616163] self-start w-full">
+            <div className="text-center text-xl font-['Work_Sans'] h-32 leading-[30.3px] text-[#616163] self-start w-full">
               Recipients can access your video effortlessly through the provided
               link, with our user-friendly interface suitable for everyone.
             </div>
+            <Image
+              width={1000}
+              height={1000}
+              src="vector.svg"
+              alt="My vector SVG"
+            />
           </div>
         </div>
       </div>
