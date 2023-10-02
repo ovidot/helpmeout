@@ -1,11 +1,9 @@
 import React from "react";
 
-import "./nav.css";
-import Link from "next/link";
-
-const Navbar = () => {
+const Logo = () => {
   return (
-    <div className="bg-white flex flex-row gap-2 w-full h-20 items-center px-[110px]">
+    <>
+      {" "}
       <div id="ICON" className="w-10 shrink-0">
         <svg
           width="40"
@@ -34,17 +32,8 @@ const Navbar = () => {
       <div className="font-['Inter'] font-bold text-[#100a42] mr-[373px]">
         HelpMeOut
       </div>
-      <div className="font-['Work_Sans'] font-medium mr-8">Features</div>
-      <div className="font-['Work_Sans'] font-medium mr-[374px]">
-        How It Works
-      </div>
-      <Link href={`/Register`}>
-        <div className="text-center text-lg font-['Sora'] font-semibold text-[#120b48]">
-          Get Started
-        </div>
-      </Link>
-    </div>
+    </>
   );
 };
 
-export default Navbar;
+export default Logo;

@@ -3,7 +3,7 @@ import React from "react";
 
 const Videocard = () => {
   return (
-    <div className="border-solid border-[rgba(182,_179,_198,_0.6)] bg-[rgba(251,_251,_251,_0.5)] flex flex-col gap-6 w-full items-center pt-4 pb-6 px-4 border rounded-[24px]">
+    <div className="border-solid hover:scale-110 border-[rgba(182,_179,_198,_0.6)] bg-[rgba(251,_251,_251,_0.5)] flex flex-col gap-6 w-full items-center pt-4 pb-6 px-4 border rounded-[24px]">
       <Image
         alt=""
         width={500}

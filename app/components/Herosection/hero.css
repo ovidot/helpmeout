@@ -4,3 +4,29 @@
     align-items: flex-start;
     gap: 48px;
 }
+
+
+.dotted-blue{
+    /* border:1px solid cyan; */
+    width: min-content;
+    height: min-content;
+    flex-shrink: 0;
+    color: #BAF6EB;
+    background-image: url('/dottedblue.svg');
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index: 1;
+}
+.dotted-grey{
+    /* border:1px solid magenta; */
+    width: 330px;
+    height: 313.077px;
+    flex-shrink: 0;
+    color:#100A42;
+    background-image: url('/dottedgrey.svg');
+    position:absolute;
+    right:-17px;
+    top:-60px;
+    z-index: 1;
+}

@@ -1,8 +1,9 @@
-import VideorepoNav from "@/app/components/videorepoNav";
 import React from "react";
 import "../vrepo.css";
 import Image from "next/image";
 import Webcard from "@/app/components/Webcard";
+import VideorepoNav from "/app/components/videorepoNav";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -13,18 +14,24 @@ const page = () => {
           <VideorepoNav />
         </div>
         <div className="flex flex-row justify-between gap-2 items-start mb-4 ml-24">
-          <div className="text-base font-['Work_Sans'] text-[rgba(20,_20,_20,_0.7)]">
-            Home
-          </div>
+          <Link href={`/`}>
+            <div className="text-base font-['Work_Sans'] text-[rgba(20,_20,_20,_0.7)]">
+              Home
+            </div>
+          </Link>
+
           <div className="text-base font-['Work_Sans'] text-[rgba(20,_20,_20,_0.7)]">
             /
           </div>
-          <div
-            id="RecentVideos"
-            className="text-base font-['Work_Sans'] text-[rgba(20,_20,_20,_0.7)]"
-          >
-            Recent Videos{" "}
-          </div>
+          <Link href={`/Videorepo`}>
+            <div
+              id="RecentVideos"
+              className="text-base font-['Work_Sans'] text-[rgba(20,_20,_20,_0.7)]"
+            >
+              Recent Videos{" "}
+            </div>
+          </Link>
+
           <div
             id="Element6"
             className="text-base font-['Work_Sans'] text-[rgba(20,_20,_20,_0.7)]"
