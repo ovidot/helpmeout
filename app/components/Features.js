@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Features = () => {
@@ -113,8 +114,11 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <img
-          src="https://file.rendit.io/n/QPUIJVhXuVRgaMMyWUWy.png"
+        <Image
+          width={1440}
+          height={1030}
+          alt=""
+          src="/VideoRepository.png"
           id="VideoRepository"
           className="self-start"
         />
