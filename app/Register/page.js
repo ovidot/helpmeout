@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "../components/logo";
+
 import Link from "next/link";
+import Logo from "../components/Logo";
 
 const page = () => {
   return (
