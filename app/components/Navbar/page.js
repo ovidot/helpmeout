@@ -35,11 +35,11 @@ const Navbar = () => {
         HelpMeOut
       </div>
       <div className="font-['Work_Sans'] font-medium mr-8">Features</div>
-      <div className="font-['Work_Sans'] font-medium mr-[374px]">
+      <div className="font-['Work_Sans'] font-medium mr-[274px]">
         How It Works
       </div>
       <Link href={`/Register`}>
-        <div className="text-center text-lg font-['Sora'] font-semibold text-[#120b48]">
+        <div className="text-center text-lg font-['Sora']  font-semibold text-[#120b48]">
           Get Started
         </div>
       </Link>

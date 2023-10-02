@@ -9,7 +9,7 @@ const Webcard = () => {
 
   useEffect(() => {
     // Fetch video path from Flask API
-    fetch("http://127.0.0.1:5000/get_video/1") // Assuming video_id is 1
+    fetch("https://hngx-video-chrome-extension.onrender.com/get_video/1") // Assuming video_id is 1
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status:${response.status}`);
@@ -31,7 +31,11 @@ const Webcard = () => {
       id="WEBCARD"
       className="border-solid border-[rgba(182,_179,_198,_0.6)] bg-[rgba(251,_251,_251,_0.5)] self-stretch flex flex-col items-center mb-6 mx-24 pt-4 pb-6 px-4 border rounded-[24px]"
     >
-      {videoUrl && <VideoPlayer filePath={videoUrl} />}
+      {videoUrl ? (
+        <VideoPlayer filePath={videoUrl} />
+      ) : (
+        <VideoPlayer filePath={videoUrl} />
+      )}
     </div>
   );
 };

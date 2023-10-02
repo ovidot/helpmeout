@@ -1,6 +1,5 @@
 import React from "react";
 import "../vrepo.css";
-import Image from "next/image";
 import Webcard from "@/app/components/Webcard";
 import VideorepoNav from "../../components/VideorepoNav";
 import Link from "next/link";

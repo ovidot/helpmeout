@@ -1,20 +1,26 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const VideorepoNav = () => {
   return (
     <>
-      <div className="flex flex-row gap-2 items-center">
-        <Image
-          alt=""
-          width={500}
-          height={500}
-          src="/icon.png"
-          id="ICON2"
-          className="self-start w-10 shrink-0"
-        />
-        <div className="font-['Inter'] font-bold text-[#100a42]">HelpMeOut</div>
-      </div>
+      <Link href={`/`}>
+        <div className="flex flex-row gap-2 items-center">
+          <Image
+            alt=""
+            width={500}
+            height={500}
+            src="/icon.png"
+            id="ICON2"
+            className="self-start w-10 shrink-0"
+          />
+          <div className="font-['Inter'] font-bold text-[#100a42]">
+            HelpMeOut
+          </div>
+        </div>
+      </Link>
+
       <div className="flex flex-row justify-between gap-2 items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
