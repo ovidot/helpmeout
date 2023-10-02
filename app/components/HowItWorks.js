@@ -21,7 +21,7 @@ const HowItWorks = () => {
               Record Screen
             </div>
             <div className="text-center text-xl font-['Work_Sans'] leading-[30.3px] text-[#616163] self-start w-full">
-              Click the "Start Recording" button in our extension.
+              Click the &quot;Start Recording&quot; button in our extension.
               {"  "}
               choose which part of your screen to capture and who you want to
               send it to.
