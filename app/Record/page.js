@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar/page";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -295,9 +296,11 @@ const page = () => {
               saving it to your account.
             </div>
             <div className="bg-[#120b48] flex flex-col justify-center h-12 shrink-0 items-center rounded-lg">
-              <div className="text-center font-['Work_Sans'] font-medium text-[#f9f9ff] mx-8">
-                Save Video
-              </div>
+              <Link href={`/Videorepo`}>
+                <div className="text-center font-['Work_Sans'] font-medium text-[#f9f9ff] mx-8">
+                  Save Video
+                </div>
+              </Link>
             </div>
             <div className="text-center text-2xl font-['Sora'] font-semibold text-[#7e7e7e]">
               Dont have an account?{" "}
