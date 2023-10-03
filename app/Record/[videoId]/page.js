@@ -228,7 +228,7 @@ const Page = () => {
                 width={570}
                 height={370}
                 allow="autoplay"
-                src={`http://127.0.0.1:5000/get_video/${vidId}`}
+                src={`https://ovidotvideo.onrender.com/get_video/${vidId}`}
                 title="videolabone"
               ></iframe>
 
