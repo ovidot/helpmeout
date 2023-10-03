@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/page";
 import Footer from "../../components/Footer";
 import Link from "next/link";
@@ -7,9 +7,40 @@ import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
 const Page = () => {
+  const [video, setVideo] = useState("");
   const params = useSearchParams();
   const vidId = params.get("videoId");
   console.log(vidId);
+
+  fetch(`https://ovidotvideo.onrender.com/get_video/${vidId}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("response from api wasnt ok");
+      }
+      console.log(response.url);
+      return response.url;
+    })
+    .then((data) => {
+      const video = data;
+      setVideo(video);
+      console.log(`this is the video:${video}`);
+    })
+    .catch((error) => console.error("Error:", error));
+
+  // const getVideo = async () => {
+  //   const res = fetch(`https://ovidotvideo.onrender.com/get_video/${vidId}`);
+
+  //   if (!res.ok) {
+  //     throw new Error("could not retrieve video");
+  //   }
+  //   return res.json();
+
+  // };
+  // const Video = async ()=>{
+  //   const video = await getVideo();
+
+  //   return v
+  // }
 
   return (
     <>
@@ -228,7 +259,7 @@ const Page = () => {
                 width={570}
                 height={370}
                 allow="autoplay"
-                src={`https://ovidotvideo.onrender.com/get_video/${vidId}`}
+                src={video}
                 title="videolabone"
               ></iframe>
 
