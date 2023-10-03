@@ -1,9 +1,16 @@
+"use client";
 import React from "react";
-import Navbar from "../components/Navbar/page";
-import Footer from "../components/Footer";
+import Navbar from "../../components/Navbar/page";
+import Footer from "../../components/Footer";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 
-const page = () => {
+const Page = () => {
+  const params = useSearchParams();
+  const vidId = params.get("videoId");
+  console.log(vidId);
+
   return (
     <>
       <Navbar />
@@ -25,13 +32,39 @@ const page = () => {
                   id="UntitledVideo"
                   className="text-2xl font-['Sora'] font-semibold text-[#413c6d]"
                 >
-                  Untitled_Video_20232509{" "}
+                  Untitled_Video_20232509
                 </div>
-                <img
-                  src="https://file.rendit.io/n/lWgviOhkVUL7BvZ94BD8.svg"
-                  id="Vuesaxlinearedit"
-                  className="self-start w-8 shrink-0"
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="32"
+                  viewBox="0 0 33 32"
+                  fill="none"
+                >
+                  <path
+                    d="M15.167 2.66675H12.5003C5.83366 2.66675 3.16699 5.33341 3.16699 12.0001V20.0001C3.16699 26.6667 5.83366 29.3334 12.5003 29.3334H20.5003C27.167 29.3334 29.8337 26.6667 29.8337 20.0001V17.3334"
+                    stroke="#120B48"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M21.8865 4.02676L11.3798 14.5334C10.9798 14.9334 10.5798 15.7201 10.4998 16.2934L9.92651 20.3068C9.71317 21.7601 10.7398 22.7734 12.1932 22.5734L16.2065 22.0001C16.7665 21.9201 17.5532 21.5201 17.9665 21.1201L28.4732 10.6134C30.2865 8.80009 31.1398 6.69343 28.4732 4.02676C25.8065 1.36009 23.6998 2.21343 21.8865 4.02676Z"
+                    stroke="#120B48"
+                    strokeWidth="1.5"
+                    stroke-miterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M20.3799 5.53345C21.2732 8.72011 23.7666 11.2134 26.9666 12.1201"
+                    stroke="#120B48"
+                    strokeWidth="1.5"
+                    stroke-miterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </div>
               <div className="border-solid border-[#e7e7ed] bg-[rgba(182,_179,_198,_0.2)] self-stretch flex flex-row justify-between mb-12 h-16 shrink-0 items-center px-6 border-0 rounded-lg">
                 <div
@@ -76,9 +109,9 @@ const page = () => {
                     <path
                       d="M4.66699 12.4998H3.83366C3.39163 12.4998 2.96771 12.3242 2.65515 12.0117C2.34259 11.6991 2.16699 11.2752 2.16699 10.8332V3.33317C2.16699 2.89114 2.34259 2.46722 2.65515 2.15466C2.96771 1.8421 3.39163 1.6665 3.83366 1.6665H11.3337C11.7757 1.6665 12.1996 1.8421 12.5122 2.15466C12.8247 2.46722 13.0003 2.89114 13.0003 3.33317V4.1665M9.66699 7.49984H17.167C18.0875 7.49984 18.8337 8.24603 18.8337 9.1665V16.6665C18.8337 17.587 18.0875 18.3332 17.167 18.3332H9.66699C8.74652 18.3332 8.00033 17.587 8.00033 16.6665V9.1665C8.00033 8.24603 8.74652 7.49984 9.66699 7.49984Z"
                       stroke="#120B48"
-                      stroke-width="1.67"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.67"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                   <div
@@ -104,7 +137,7 @@ const page = () => {
                     viewBox="0 0 25 24"
                     fill="none"
                   >
-                    <g clip-path="url(#clip0_577_919)">
+                    <g clipPath="url(#clip0_577_919)">
                       <path
                         d="M24.5 11.9993C24.5 5.37187 19.1274 -0.000705719 12.5 -0.000705719C5.87258 -0.000705719 0.5 5.37187 0.5 11.9993C0.5 17.9888 4.88823 22.9533 10.625 23.8535V15.468H7.57813V11.9993H10.625V9.35554C10.625 6.34805 12.4165 4.68679 15.1576 4.68679C16.4705 4.68679 17.8438 4.92117 17.8438 4.92117V7.87429H16.3306C14.8399 7.87429 14.375 8.7993 14.375 9.74829V11.9993H17.7031L17.1711 15.468H14.375V23.8535C20.1118 22.9533 24.5 17.9888 24.5 11.9993Z"
                         fill="#1877F2"
@@ -191,11 +224,14 @@ const page = () => {
               className="border-solid border-[#bbbbbb] mt-px w-px shrink-0 h-[930px] border-r border-l-0 border-y-0"
             />
             <div className="flex flex-col gap-4 w-1/2 items-start">
-              <img
-                src="https://file.rendit.io/n/YJvsKaRpRLLz20vVdi2y.png"
-                id="Video"
-                className="mb-16"
-              />
+              <iframe
+                width={570}
+                height={370}
+                allow="autoplay"
+                src={`http://127.0.0.1:5000/get_video/${vidId}`}
+                title="videolabone"
+              ></iframe>
+
               <div className="text-2xl font-['Sora'] font-semibold ml-px">
                 Transcript
               </div>
@@ -214,10 +250,10 @@ const page = () => {
                   <path
                     d="M13.7797 6.46655L9.43306 10.8132C8.91973 11.3266 8.07973 11.3266 7.56639 10.8132L3.21973 6.46655"
                     stroke="#BBBBBB"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </div>
@@ -316,4 +352,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
